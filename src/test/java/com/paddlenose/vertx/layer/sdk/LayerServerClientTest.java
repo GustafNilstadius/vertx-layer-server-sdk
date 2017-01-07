@@ -39,7 +39,8 @@ public class LayerServerClientTest {
                 .setDefaultPort(8080);
         HttpClient httpClient = vertx.createHttpClient(clientOptions);
         String app_id = "123456789abc";
-        subject = new LayerServerClient(httpClient, new LayerServerOptions(new JsonObject().put("layer_app_id", app_id).put("layer_app_token", "thisIsAToken")));
+        LayerServerOptions options = new LayerServerOptions(new JsonObject().put("layer_app_id", app_id).put("layer_app_token", "thisIsAToken"));
+        subject = new LayerServerClient(httpClient, options);
 
     }
 
