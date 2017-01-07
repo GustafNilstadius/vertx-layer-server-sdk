@@ -16,8 +16,16 @@
         <license>
             <name>This code is under the MIT licence</name>
             <url>https://github.com/HiPERnx/vertx-layer-server-sdk/blob/master/LICENSE</url>
+            <distribution>repo</distribution>
         </license>
     </licenses>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
     <developers>
         <developer>
@@ -71,3 +79,4 @@
     </dependencies>
 
 </project>
+
