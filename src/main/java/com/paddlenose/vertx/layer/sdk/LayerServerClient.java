@@ -10,6 +10,7 @@ import io.vertx.core.json.JsonObject;
  * @author Gustaf Nilstadius
  *         Created by Gustaf Nilstadius ( hipernx ) on 2017-01-07.
  */
+@SuppressWarnings("WeakerAccess")
 public class LayerServerClient {
     /**
      * A HttpClient, requires default host

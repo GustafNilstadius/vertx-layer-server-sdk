@@ -1,7 +1,5 @@
 package com.paddlenose.vertx.layer.sdk;
 
-import com.paddlenose.vertx.layer.sdk.LayerServerClient;
-import com.paddlenose.vertx.layer.sdk.LayerServerOptions;
 import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpClient;
 import io.vertx.core.http.HttpClientOptions;
