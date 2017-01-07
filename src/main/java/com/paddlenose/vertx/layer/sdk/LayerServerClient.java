@@ -11,13 +11,14 @@ import io.vertx.core.json.JsonObject;
 /**
  * Layer client class
  * <p>
- *     A SDK to interface with Layer Server API. Use with caution. These methods should be protected.
- *     See Github repo https://github.com/HiPERnx/vertx-layer-server-sdk
- *
- *     Handler<HttpClientResponse> future Needs to handle http(s) errors.
- *     Currently there is no error handler for other errors.
- *
- *     www.paddlenose.com
+ *     A SDK to interface with Layer Server API. Use with caution. These methods should be protected. <br>
+ *     See <a href="https://github.com/HiPERnx/vertx-layer-server-sdk">Github repo</a>
+ *     <img src="https://travis-ci.org/HiPERnx/vertx-layer-server-sdk.svg?branch=master" alt="Build status"> <br>
+ *      <br>
+ *     Handler<HttpClientResponse> future Needs to handle http(s) errors. <br>
+ *     Currently there is no error handler for other errors. <br>
+ *      <br>
+ *     <a href="www.paddlenose.com">www.paddlenose.com</a>
  * </p>
  * @author Gustaf Nilstadius
  *         Created by Gustaf Nilstadius ( hipernx ) on 2017-01-07.
