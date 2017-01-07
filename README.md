@@ -12,7 +12,7 @@ To get started you simply have to add the dependency to your Maven project
         <dependency>  
                 <groupId>com.github.HiPERnx</groupId>  
                 <artifactId>vertx-layer-server-sdk</artifactId>  
-                <version>v1.0</version>  
+                <version>v1.1</version>  
         </dependency>
 ```
 
