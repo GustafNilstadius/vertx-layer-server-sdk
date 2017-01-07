@@ -1,4 +1,4 @@
-package com.amojee.desktop;
+package com.paddlenose.vertx.layer.sdk;
 
 import com.paddlenose.vertx.layer.sdk.LayerServerClient;
 import com.paddlenose.vertx.layer.sdk.LayerServerOptions;

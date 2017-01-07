@@ -28,7 +28,7 @@ public class LayerServerClient {
      * LayerClient implements LayerInterface.
      *
      * @param client A HttpClient, requires default host
-     * @param layer_Identity Requires layer_app_id and layer_app_token
+     * @param options Requires layer_app_id and layer_app_token
      */
     public LayerServerClient(HttpClient client, LayerServerOptions options) {
         this.client = client;

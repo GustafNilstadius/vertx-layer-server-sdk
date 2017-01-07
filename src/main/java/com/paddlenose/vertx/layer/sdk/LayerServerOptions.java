@@ -25,7 +25,7 @@ public class LayerServerOptions {
     }
 
     /**
-     * Contructor, creates options from arguments
+     * Constructor, creates options from arguments
      * @param layer_app_id Layer application id
      * @param layer_app_token Layer application token
      */
@@ -65,7 +65,7 @@ public class LayerServerOptions {
     }
 
     /**
-     * Retrives a string from options with id.
+     * Retrieves a string from options with id.
      * @param id Id of field required
      * @return String
      */
