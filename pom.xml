@@ -8,5 +8,37 @@
     <artifactId>vertx-layer-server-sdk</artifactId>
     <version>0.1</version>
 
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>This is a sdk for use with Layers messaging platform</description>
+    <url>www.paddlenose.com</url>
+
+    <licenses>
+        <license>
+            <name>This code is under the MIT licence</name>
+            <url>https://github.com/HiPERnx/vertx-layer-server-sdk/blob/master/LICENSE</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Gustaf Nilstadius</name>
+            <email>gustaf@paddlenose.com</email>
+            <organization>Paddle Nose Studios</organization>
+            <organizationUrl>www.paddlenose.com</organizationUrl>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-unit</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-core</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+    </dependencies>
 
 </project>
