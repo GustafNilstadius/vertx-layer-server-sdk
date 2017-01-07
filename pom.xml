@@ -6,7 +6,7 @@
 
     <groupId>com.paddlenose</groupId>
     <artifactId>vertx-layer-server-sdk</artifactId>
-    <version>0.1</version>
+    <version>0.1-SNAPSHOT</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>This is a sdk for use with Layers messaging platform</description>
