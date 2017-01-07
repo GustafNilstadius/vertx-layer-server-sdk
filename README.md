@@ -33,7 +33,9 @@ Create HttpClient, see Vert.X documentation on usage of HttpClient.
 
 Create options and instance of LayerServerClient  
 ```Java
-        LayerServerOptions options = new LayerServerOptions(new JsonObject().put("layer_app_id", app_id).put("layer_app_token", "thisIsAToken"));
+        LayerServerOptions options = new LayerServerOptions(new JsonObject()
+                .put("layer_app_id", app_id)
+                .put("layer_app_token", "thisIsAToken"));
         layerClient = new LayerServerClient(httpClient, options);
 ```
 
