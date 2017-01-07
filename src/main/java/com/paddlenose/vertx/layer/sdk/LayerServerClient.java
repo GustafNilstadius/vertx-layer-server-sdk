@@ -6,9 +6,22 @@ import io.vertx.core.http.HttpClientResponse;
 import io.vertx.core.http.HttpMethod;
 import io.vertx.core.json.JsonObject;
 
+//TODO add error handlers
+
 /**
+ * Layer client class
+ * <p>
+ *     A SDK to interface with Layer Server API. Use with caution. These methods should be protected.
+ *     See Github repo https://github.com/HiPERnx/vertx-layer-server-sdk
+ *
+ *     Handler<HttpClientResponse> future Needs to handle http(s) errors.
+ *     Currently there is no error handler for other errors.
+ *
+ *     www.paddlenose.com
+ * </p>
  * @author Gustaf Nilstadius
  *         Created by Gustaf Nilstadius ( hipernx ) on 2017-01-07.
+ * @
  */
 @SuppressWarnings("WeakerAccess")
 public class LayerServerClient {

@@ -3,6 +3,7 @@ package com.paddlenose.vertx.layer.sdk;
 import io.vertx.core.json.JsonObject;
 
 /**
+ * Options for LayerServerClient.
  * @author Gustaf Nilstadius
  *         Created by Gustaf Nilstadius ( hipernx ) on 2017-01-07.
  */
@@ -12,6 +13,9 @@ public class LayerServerOptions {
 
     /**
      * Constructor creates options
+     * <p>
+     *     Requires String layer_app_id, String layer_app_token as JsonObject
+     * </p>
      * @param options the options, contains: String layer_app_id, String layer_app_token
      */
     public LayerServerOptions(JsonObject options){
