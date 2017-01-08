@@ -39,8 +39,7 @@ Create options and instance of LayerServerClient
         layerClient = new LayerServerClient(httpClient, options);
 ```
 
-Call Layer and assert true that status code is = 200 and that.
-conversation_UUID is the Layer UUID for the conversation that we request.
+Call Layer and get conversation as system, conversation_UUID is the Layer UUID for the conversation that we request.
 ```Java
         layerClient.getConversation(response -> {
                     //Handle HTTP errors here, like 404. 
