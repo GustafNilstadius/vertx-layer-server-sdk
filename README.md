@@ -52,3 +52,5 @@ Call Layer and get conversation as system, conversation_UUID is the Layer UUID f
 
 
 This code is developed by Gustaf Nilstadius at [Paddle Nose Studios](www.paddlenose.com)
+
+[Vertx awesome](https://github.com/vert-x3/vertx-awesome)

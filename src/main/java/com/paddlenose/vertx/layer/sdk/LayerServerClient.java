@@ -12,7 +12,7 @@ import io.vertx.core.json.JsonObject;
  * Layer client class
  * <p>
  *     A SDK to interface with Layer Server API. Use with caution. These methods should be protected. <br>
- *     See <a href="https://github.com/HiPERnx/vertx-layer-server-sdk">Github repo</a>
+ *     See <a href="https://github.com/HiPERnx/vertx-layer-server-sdk">GitHub repo</a>
  *     <img src="https://travis-ci.org/HiPERnx/vertx-layer-server-sdk.svg?branch=master" alt="Build status"> <br>
  *      <br>
  *     Handler<HttpClientResponse> future Needs to handle http(s) errors. <br>
