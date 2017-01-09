@@ -58,7 +58,7 @@ public class LayerServerClient {
      * @param user_ID User id for which conversations will be requested
      */
     public void getConversationsAsUser(Handler<HttpClientResponse> future, String user_ID) {
-        client.request(HttpMethod.GET, "/apps/" + layer_app_id + "/user/" + user_ID + "/conversations?sort_by=last_message", future)
+        client.request(HttpMethod.GET, "/apps/" + layer_app_id + "/users/" + user_ID + "/conversations?sort_by=last_message", future)
                 .putHeader("accept", "application/vnd.layer+json; version=2.0")
                 .putHeader("Authorization", "Bearer " + layer_app_token )
                 .putHeader("Content-Type", "application/json")
@@ -74,7 +74,7 @@ public class LayerServerClient {
      * @param user_ID User id for which conversation messages will be requested
      */
     public void getConversationMessageAsUser(Handler<HttpClientResponse> future, String conversation_UUID, String user_ID) {
-        client.request(HttpMethod.GET, "/apps/" + layer_app_id + "/user/" + user_ID + "/conversations/" + conversation_UUID + "/messages", future)
+        client.request(HttpMethod.GET, "/apps/" + layer_app_id + "/users/" + user_ID + "/conversations/" + conversation_UUID + "/messages", future)
                 .putHeader("accept", "application/vnd.layer+json; version=2.0")
                 .putHeader("Authorization", "Bearer " + layer_app_token )
                 .putHeader("Content-Type", "application/json")
@@ -94,7 +94,7 @@ public class LayerServerClient {
      * @param user_ID User ID specifying the layer user
      */
     public void postMessageAsUser(Handler<HttpClientResponse> future, String conversation_UUID, JsonObject message, String user_ID) {
-        client.request(HttpMethod.POST, "/apps/" + layer_app_id + "/user/" + user_ID + "/conversations/" + conversation_UUID + "/messages", future)
+        client.request(HttpMethod.POST, "/apps/" + layer_app_id + "/users/" + user_ID + "/conversations/" + conversation_UUID + "/messages", future)
                 .putHeader("accept", "application/vnd.layer+json; version=2.0")
                 .putHeader("Authorization", "Bearer " + layer_app_token )
                 .putHeader("Content-Type", "application/json")
@@ -109,7 +109,7 @@ public class LayerServerClient {
      * @param conversation JsonObject Message, see Layer API documentation.
      */
     public void postConversationAsUser(Handler<HttpClientResponse> future, JsonObject conversation, String user_ID) {
-        client.request(HttpMethod.POST, "/apps/" + layer_app_id + "/user/" + user_ID + "/conversations", future)
+        client.request(HttpMethod.POST, "/apps/" + layer_app_id + "/users/" + user_ID + "/conversations", future)
                 .putHeader("accept", "application/vnd.layer+json; version=2.0")
                 .putHeader("Authorization", "Bearer " + layer_app_token )
                 .putHeader("Content-Type", "application/json")
