@@ -189,4 +189,18 @@ public class LayerServerClient {
                 .exceptionHandler(err -> future.handle(null))
                 .end(announcement.encode());
     }
+
+    /**
+     * Sends a notification to specified recipients
+     * @param future Handler, requires error handler.
+     * @param notification Notification requires String[] recipients, JsonObject notification {String title, String text, (optional) String sound}
+     */
+    public void postNotification(Handler<HttpClientResponse> future, JsonObject notification){
+        client.request(HttpMethod.POST, "/apps/" + layer_app_id + "/notifications", future)
+                .putHeader("accept", "application/vnd.layer+json; version=2.0")
+                .putHeader("Authorization", "Bearer " + layer_app_token )
+                .putHeader("Content-Type", "application/json")
+                .exceptionHandler(err -> future.handle(null))
+                .end(notification.encode());
+    }
 }

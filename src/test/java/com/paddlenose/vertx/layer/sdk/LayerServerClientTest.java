@@ -326,6 +326,49 @@ public class LayerServerClientTest {
         server.close();
     }
 
+    @Test
+    public void postNotification(TestContext context) throws Exception {
+        final Async async = context.async();
+        final Async asyncServer = context.async();
+
+        HttpServer server = vertx.createHttpServer().requestHandler( request -> {
+            context.assertTrue(request.absoluteURI().contains("/notifications"));
+            request.bodyHandler(body -> {
+                context.assertEquals(body.toJsonObject(), notification);
+                request.response().setStatusCode(202).end(body.toJsonObject().encode());
+                asyncServer.complete();
+            });
+        }).listen(8080, context.asyncAssertSuccess());
+
+        subject.postNotification(response -> {
+            context.assertTrue(response.statusCode() == 202);
+            response.bodyHandler(body -> {
+                context.assertEquals(body.toJsonObject(), notification);
+                async.complete();
+            });
+        }, notification);
+
+        /*
+         * Wait for async tasks to complete before cleanup
+         */
+        asyncServer.awaitSuccess();
+        async.awaitSuccess();
+        server.close();
+    }
+
+    private final JsonObject notification = new JsonObject(
+            "{\n" +
+            "    \"recipients\": [\n" +
+            "        \"layer:///identities/777\",\n" +
+            "        \"layer:///identities/999\"\n" +
+            "    ],\n" +
+            "    \"notification\": {\n" +
+            "        \"title\": \"New Alert\",\n" +
+            "        \"text\": \"This is the alert text to include with the Push Notification.\",\n" +
+            "        \"sound\": \"chime.aiff\"\n" +
+            "    }\n" +
+            "}");
+
     private final JsonObject announcement = new JsonObject("" +
             "{\n" +
             "    \"recipients\": [\n" +
