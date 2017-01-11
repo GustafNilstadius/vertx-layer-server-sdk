@@ -6,14 +6,25 @@ This is a SDK to communicate with [Layer](https://github.com/layerhq) Server API
 [Java doc can be found here!](http://vertx-layer-server-sdk.paddlenose.com/)  
 
 ##Get started 
-To get started you simply have to add the dependency to your Maven project  
+To get started you simply have to add the dependency and repository to your Maven project  
 
 ```XML
-        <dependency>  
-                <groupId>com.github.HiPERnx</groupId>  
-                <artifactId>vertx-layer-server-sdk</artifactId>  
-                <version>v1.3</version>  
-        </dependency>
+        <dependencies>
+            <dependency>  
+                    <groupId>com.github.HiPERnx</groupId>  
+                    <artifactId>vertx-layer-server-sdk</artifactId>  
+                    <version>v1.3</version>  
+            </dependency>  
+        </dependencies>
+        
+          
+          
+        <repositories>
+            <repository>
+                <id>jitpack.io</id>
+                <url>https://jitpack.io</url>
+            </repository>
+        </repositories>
 ```
 
 You will need a Application ID and Token from Layer. [See Layer server documentation.](https://docs.layer.com/reference/server_api/introduction)
