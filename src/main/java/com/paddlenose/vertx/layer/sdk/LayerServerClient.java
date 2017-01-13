@@ -87,7 +87,7 @@ public class LayerServerClient {
 
     /**
      * Sends a single message to the Layer API.
-     *
+     * //TODO Needs further testing
      * @param future Handler, requires error handler.
      * @param conversation_UUID String for URI
      * @param message JsonObject Message, see Layer API documentation.
