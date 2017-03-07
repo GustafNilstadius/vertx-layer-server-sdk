@@ -1,5 +1,6 @@
 package com.paddlenose.vertx.layer.sdk;
 
+import io.vertx.core.Future;
 import io.vertx.core.Handler;
 import io.vertx.core.http.HttpClient;
 import io.vertx.core.http.HttpClientResponse;
@@ -173,6 +174,21 @@ public class LayerServerClient {
                 .putHeader("Authorization", "Bearer " + layer_app_token )
                 .putHeader("Content-Type", "application/json")
                 .exceptionHandler(err -> future.handle(null))
+                .end(message.encode());
+    }
+
+    /**
+     * Sends message as user specified in JsonObject message
+     * @param future Handler, requires error handler.
+     * @param conversation_UUID Conversation UUID of which to send the message
+     * @param message Message requires String sender_id, MessagePart[] parts. Optional Object notification
+     */
+    public void postMessage(Future<HttpClientResponse> future, String conversation_UUID, JsonObject message){
+        client.request(HttpMethod.POST, "/apps/" + layer_app_id + "/conversations/" + conversation_UUID + "/messages", future::complete)
+                .putHeader("accept", "application/vnd.layer+json; version=2.0")
+                .putHeader("Authorization", "Bearer " + layer_app_token )
+                .putHeader("Content-Type", "application/json")
+                .exceptionHandler(future::fail)
                 .end(message.encode());
     }
 
